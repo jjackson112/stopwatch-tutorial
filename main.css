@@ -1,0 +1,130 @@
+:root {
+    --main-color: coral;
+    --light-color: bisque;
+    --red-color: maroon;
+    --max-width: 800px;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.stopwatch-section {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stopwatch-container {
+    background-color: transparent;
+    width: 55%;
+    height: 250px;
+    border-radius: 10%;
+    border: silver 10px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 30px;
+    max-width: var(--max-width);
+}
+
+h1 {
+    margin: 0;
+    font-size: 3.5rem;
+    color: var(--light-color);
+    letter-spacing: -6px;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 30px;
+}
+
+.btn {
+    padding: 5px 15px;
+    width: 100px;
+    border-radius: 7px;
+    border: 2px solid var(--light-color);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--red-color);
+}
+
+@media (hover) {
+    .btn:hover {
+        background-color: transparent;
+        color: var(--light-color);
+        transition: 0.3s ease-in-out;
+    }
+}
+
+@media (max-width: 930px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    .btn {
+        width: 80px;
+    }
+}
+
+@media (max-width: 783px) {
+    .buttons {
+        column-gap: 20px;
+    }
+
+    .btn {
+        width: 90px;
+    }
+}
+
+@media (max-width: 700px) {
+    .buttons {
+        flex-direction: column;
+        row-gap: 10px;
+        width: 35%;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .stopwatch-container {
+        height: auto;
+        padding: 40px 0;
+        width: 75%;
+    }
+}
+
+@media (max-width: 460px) {
+    .buttons {
+        width: 50%;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 369px) {
+    .buttons {
+        width: 45%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
