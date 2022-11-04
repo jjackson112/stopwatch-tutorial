@@ -13,11 +13,25 @@ let hours = Math.floor(counter/3600);
 let minutes = Math.floor((counter - (hours * 3600)) / 60);
 let seconds = counter % 60;
 
+if (seconds < 10) {
+    seconds = `0${seconds}`
+}
+if (minutes < 10) {
+    minutes = `0${minutes}`
+}
+if (hours < 10) {
+    hours = `0${hours}`
+}
+
 textArea.textContent = `${hours} : ${minutes} : ${seconds}`
 
 };
 
 const startStopwatch = () => {
+
+    if (interval) {
+    return;
+}
     interval = setInterval(stopwatch, 1000);
 };
 
