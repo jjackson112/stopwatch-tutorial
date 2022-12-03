@@ -50,4 +50,4 @@ startBtn.addEventListener("click", startStopwatch)
 
 resetBtn.addEventListener("click", resetStopwatch)
 
-topBtn.addEventListener("click", stopStopwatch)
+stopBtn.addEventListener("click", stopStopwatch)
